@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Lab work 9</title>
+	<link type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  </head>
+
+  <body>
+	<form method="POST" action="https://staminaon.com/en/typing10.php">
+      <br>Введіть ПІП:<input name="PIP" type="" >
+      <br><br>Пароль: <input name="password" type="" maxlength="5" size="5">
+      <br><br>Стать: <input name="gender_f" type="checkbox" > жіноча   <input name="gender_m" type="checkbox" > чоловіча
+      <br><br>Чим займаєшся: 
+      <br><input name="to_do_s" type="checkbox" >Студент
+      <br><input name="to_do_sh" type="checkbox" >Школяр
+      <br><input name="to_do_a" type="checkbox" >Аспірант
+      <br><input name="to_do_w" type="checkbox" >Працюю
+      <br><input name="to_do_nw" type="checkbox" >Не працюю<br><br>
+
+      Які книги любиш читати:<br>
+
+      <select name="like_book" size="4">
+        <option>Фентезі</option>
+        <option>Фантастика</option>
+        <option>Романтика</option>
+        <option>Пригоди</option>
+        <option>Історичні</option>
+      </select>
+
+      <br><br>Що зараз ти читаєш?
+      <br>Поділися враженями про прочитане
+      <br><textarea name="em" cols="40" rows="5"></textarea>
+
+      <br><br><input type=submit name="b_submit" ></input>
+      <input type=reset name="b_reset" ></input>  
+    </form>
+	
+	<input type="submit" onclick="alert('!')">
+  
+	<!-- Кнопка, котра відкриває модальне вікно -->
+	<a href="test.html" class="btn btn-primary">Відкрити вікно</a>
+	
+	<!-- HTML-код модального вікна-->
+<div id="myModal" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<!-- Заголовок модального окна -->
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" ariahidden="true">×</button>
+				<h4 class="modal-title">Заголовок модального вікна</h4>
+			</div>
+			<!-- Основний вміст модального вікна -->
+			<div class="modal-body">
+ Вміст модального вікна...
+			</div>
+			<!-- Футер модального вікна -->
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" datadismiss="modal">Закрити</button>
+				<button type="button" class="btn btn-primary">Зберегти зміни</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Скрипт, прив’язуючий подію click, котрий відкриває модальне вікно, з элементом, що має клас .btn -->
+
+	
+<script>
+		$(document).ready(function(){
+	//при натисканні на любу кнопку, що має клас .btn
+	$(".btn").click(function() {
+		//відкрити модальне вікно з id="myModal"
+		$("#myModal").modal('show');
+	});
+});
+</script>
+  </body>
+</html>
